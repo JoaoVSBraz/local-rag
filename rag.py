@@ -1,10 +1,10 @@
 import logging
 from langchain_core.documents import Document
-from langchain_ollama import ChatOllama, OllamaEmbeddings
-from langchain_postgres import PGVector
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
+from langchain_ollama import ChatOllama, OllamaEmbeddings
+from langchain_postgres import PGVector
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
