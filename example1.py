@@ -13,6 +13,9 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter 
 from langchain_ollama import OllamaEmbeddings
 
+# Inicializar o modelo de embeddings
+embeddings = OllamaEmbeddings(model="nomic-embed-text")
+
 # Carregar o arquivo PDF
 file_path = "./3DTAlpha.pdf"
 loader = PyPDFLoader(file_path)
@@ -21,9 +24,6 @@ docs = loader.load()
 # Dividir o documento em chunks
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 all_splits = text_splitter.split_documents(docs)
-
-# Inicializar o modelo de embeddings
-embeddings = OllamaEmbeddings(model="nomic-embed-text")
 
 vector_store = InMemoryVectorStore(embeddings)
 ids = vector_store.add_documents(documents=all_splits)
