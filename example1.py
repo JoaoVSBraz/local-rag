@@ -2,7 +2,7 @@
     Objetivo: Realizar busca por similaridade de texto em um documento PDF.
 
     Passos
-    1. pip install langchain-core langchain-community langchain-ollama langchain-text-splitters pypdf
+    1. pip install -r requirements.txt
     2. ollama serve
     3. ollama pull nomic-embed-text
     4. python rag2.py

@@ -2,7 +2,7 @@
     Objetivo: Criar um agente que utilize a busca por similaridade em um vector store a fim de responder uma pergunta.
 
     Passos
-    1. pip install langchain langchain-core langchain-community langchain-ollama langchain-text-splitters pypdf
+    1. pip install -r requirements.txt
     2. ollama serve
     3. ollama pull llama3.1:8b
     4. ollama pull nomic-embed-text

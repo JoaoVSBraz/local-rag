@@ -1,7 +1,7 @@
 """
     Objetivo: Conversar com um modelo de IA da forma mais simples possível.
     Passos:
-    1. pip install langchain langchain-ollama
+    1. pip install -r requirements.txt
     2. ollama serve
     3. ollama pull llama3.1:8b
     4. python example0.py
